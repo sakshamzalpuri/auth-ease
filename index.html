@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthEase - Registration</title>
+    <link rel="stylesheet" href="/style/form.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Page 1: Name & Email -->
+        <div class="page1" id="page1">
+            <div class="form-header">
+                <h1>Create Account</h1>
+                <p class="subtitle">Join AuthEase today</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text" placeholder="John Doe">
+                    <span id="nameError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" placeholder="you@example.com">
+                    <span id="emailError" class="error-message"></span>
+                </div>
+                <div id="pageBtn1" class="button-container">
+                    <button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
+                </div>
+                <div class="step-indicator">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Page 2: Topic Selection -->
+        <div class="page2" id="page2">
+            <div class="form-header">
+                <h2>Your Interests</h2>
+                <p class="subtitle">Select topics you're interested in</p>
+            </div>
+            <form id="topicsForm">
+                <div class="options">
+                    <div class="option">
+                        <span class="option-icon">💻</span>
+                        <span class="option-text">Software Development</span>
+                    </div>
+                    <div class="option">
+                        <span class="option-icon">✨</span>
+                        <span class="option-text">User Experience</span>
+                    </div>
+                    <div class="option">
+                        <span class="option-icon">🎨</span>
+                        <span class="option-text">Graphic Design</span>
+                    </div>
+                </div>
+                <div id="pageBtn2" class="button-container">
+                    <button type="button" id="prevBtn2" class="btn btn-secondary">Back</button>
+                    <button type="submit" id="nextBtn2" class="btn btn-primary">Continue</button>
+                </div>
+                <div class="step-indicator">
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Page 3: Confirmation -->
+        <div class="page3" id="page3">
+            <div class="success-container">
+                <div class="success-icon">✓</div>
+                <h2>Welcome Aboard!</h2>
+                <p class="success-message">Your account has been created successfully. Redirecting you to the dashboard...</p>
+                <div class="step-indicator">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script/form.js"></script>
+</body>
+</html>

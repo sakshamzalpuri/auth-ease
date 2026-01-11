@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Supreme', sans-serif;
+font-family: 'Bespoke Stencil', sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    margin: 2vh 0;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1400px;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: -0.3px;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Nav right */
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* <CHANGE> Updated toggle-apps button styling - now a proper icon button with hover state */
+.toggle-apps {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 50%;
+    position: relative;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #6b7280;
+    border: 1px solid transparent;
+}
+
+.toggle-apps:hover {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.toggle-letter{
+    color: white;
+    font-weight: 600;
+}
+
+.toggle-apps svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* <CHANGE> Improved user overlay menu - clean white background, proper shadow, better spacing */
+.user-info-overlay-toogle {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    cursor: default;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    min-width: 240px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.user-info-overlay-toogle.hidden{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.info-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* <CHANGE> Updated avatar styling - blue background instead of dark green */
+.avatar-logo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.avatar-initial {
+    margin: 0;
+}
+
+.user-details {
+    flex: 1;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.user-email {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 4px 0 0 0;
+    line-height: 1.2;
+}
+
+/* <CHANGE> Updated settings/logout menu items - cleaner spacing and colors */
+.sett-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.toggle-settings-container {
+    padding: 0;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.toggle-logout-container {
+    padding: 0;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.toggle-settings,
+.toggle-logout {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+    padding: 10px 16px;
+}
+
+.toggle-settings {
+    color: #4b5563;
+}
+
+.toggle-logout {
+    color: #ef4444;
+}
+
+.toggle-settings-container:hover {
+    background-color: #f9fafb;
+}
+
+.toggle-logout-container:hover {
+    background-color: #fef2f2;
+}
+
+.toggle-logout-container:hover .toggle-logout {
+    color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .user-info-overlay-toogle {
+        min-width: 200px;
+    }
+}
